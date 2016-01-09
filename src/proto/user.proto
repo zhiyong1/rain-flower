@@ -1,0 +1,8 @@
+package emr;
+
+message Master {
+
+}
+
+message Patient {
+}
