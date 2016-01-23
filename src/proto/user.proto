@@ -1,8 +1,39 @@
 package emr;
 
-message Master {
-
+message Physician {
+    optional string id;
+    repeated Patient patients; 
 }
 
 message Patient {
+    optional string id;
+    optional string user_name;
+    optional Demographics demographics;
+    optional Insurance insurance;
+    repeated Laboratory laboratories;
+    repeated Radiology radiologies;
+    
+}
+
+message Demographics {
+    optional string full_name;
+    optional uint32 birth_date;
+    enum GENDER {
+        UNKNOWN = 0;
+        MALE = 1;
+        FEMALE = 2;
+    }
+    optional GENDER gender;
+    optional double hight;
+    optional double weight;
+}
+
+message Insurance {
+    optional string name;
+}
+
+message Laboratory {
+}
+
+message Radiology {
 }
